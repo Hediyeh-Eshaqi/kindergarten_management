@@ -7,8 +7,8 @@ import Classes from './components/screens/classes/Classes';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
+    <div>
+      <header>
         <Router>
           <Routes>
             <Route path="/" element={<Mainpage/>} />
