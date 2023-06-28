@@ -1,20 +1,22 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
 import Mainpage from './components/screens/mainPage/Mainpage';
-import Teachers from './components/screens/teachers/Teachers';
-import Childrens from './components/screens/childrens/Childrens';
-import Classes from './components/screens/classes/Classes';
+import ClassManagement from './components/screens/classes/ClassManagement';
+import AddChild from './components/screens/forms/AddChild';
+import AddClass from './components/screens/forms/AddClass';
+import Navbar from './components/Navbar';
 
 function App() {
   return (
     <div>
       <header>
+        <Navbar/>
         <Router>
           <Routes>
-            <Route path="/" element={<Mainpage/>} />
-            <Route path="/teachers" element = {<Teachers/>} />
-            <Route path="/childrens" element = {<Childrens/>} />
-            <Route path="/classes" element = {<Classes/>} />
+            <Route path="/" element={<Mainpage />} />
+            <Route path="/add-child" element={<AddChild />} />
+            <Route path="/add-class" element={<AddClass />} />
+            <Route path="/classes/1" element={<ClassManagement />} />
           </Routes>
         </Router>
       </header>

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import classimage from "../../../assets/images/class.png" 
+import { Link } from 'react-router-dom';
 
 
 export default class Class extends Component {
@@ -14,7 +15,7 @@ export default class Class extends Component {
                         <h6 className=''>شماره کلاس: ۱</h6>
                         <h6>قیمت کلاس: ۱۰</h6>
                         <h6>سال کلاس: ۲۰۲۱-۰۱-۰۱</h6>
-                        <a style={{marginTop:"20px"}} href="#" class="btn btn-light">مشاهده</a>
+                        <Link to={"/classes/1"}><a style={{marginTop:"20px"}} href="#" class="btn btn-light">مدیریت کلاس</a></Link>
                     </div>
                 </div>
             </div>

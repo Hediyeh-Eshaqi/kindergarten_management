@@ -4,7 +4,7 @@ import student from "../../../assets/images/student.png"
 export default class Children extends Component {
     render() {
         return (
-            <div className="col-auto text-center">
+            <div className="col-auto text-center m-1">
                 <div class="card  mb-3 h-100" style={{ width: "18rem" }}>
                     <div class="card-header bg-light">کودک</div>
                     <div class="card-body justify-content-center text-black">
