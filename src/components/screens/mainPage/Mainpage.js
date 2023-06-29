@@ -133,6 +133,7 @@ export default class Mainpage extends Component {
                             {
                                 this.state.teachers.map((row, index) => (
                                     <Teacher key={index}
+                                        name = {row.name}
                                         familyName={row.familyName} 
                                         degree={row.degree}
                                         phoneNumber={row.phoneNumber}

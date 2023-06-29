@@ -40,3 +40,12 @@
 .btn-secondary{
   background-color: rebeccapurple !important;
 }
+
+.highlightOption{
+  background-color: white !important;
+  color: black !important;
+}
+
+.multiSelectContainer li:hover{
+  background-color: rebeccapurple !important;
+}

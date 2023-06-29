@@ -5,7 +5,7 @@ export default class Teacher extends Component {
         return (
             <div className="col-auto">
                 <div class="card  mb-3 h-100" style={{ width: "18rem" }}>
-                    <div class="card-header text-center">{this.props.familyName}</div>
+                    <div class="card-header text-center">{this.props.name} {this.props.familyName}</div>
                     <div class="card-body justify-content-center text-black">
                         <div className='text-center'>
                             <img width={100} src={teacher}></img>
