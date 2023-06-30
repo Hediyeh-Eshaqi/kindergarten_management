@@ -115,6 +115,7 @@ export default class Mainpage extends Component {
                                         hobbies = {row.hobbies}
                                         parents = {row.parents}
                                         classes = {row.classes}
+                                        childID = {row.childID}
                                     />
                                 ))
                             }

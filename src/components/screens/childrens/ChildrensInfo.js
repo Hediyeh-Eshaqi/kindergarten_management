@@ -1,26 +1,23 @@
 import React, { Component } from 'react'
 import Children1 from '../childrens/Children1'
 import Teacher1 from '../teachers/Teacher1'
-import teachertop from "../../../assets/images/teachertop.png"
+import childtop from "../../../assets/images/childtop.png"
 import axios from 'axios'
 import { Multiselect } from 'multiselect-react-dropdown';
 import Class1 from '../classes/Class1'
 
-export default class TeachersInfo extends Component {
+export default class ChildrensInfo extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            SSN:"",
-            address:"",
+            childID:"",
+            hobbies:"",
             class_list:[],
-            contract_number:"",
-            contract_salary:"",
-            contract_type:"",
-            degree:"",
-            familyName:"",
-            gender:"",
+            parent_list:[],
             name:"",
-            phoneNumber:""
+            familyName:"",
+            birthDate:"",
+            age:"",
         }
 
     }
@@ -32,20 +29,17 @@ export default class TeachersInfo extends Component {
     loadData = async () => {
         let id = window.location.pathname.split("/").pop()
         await axios
-            .get("http://127.0.0.1:8000/api/teacher-information/" + id + "/")
+            .get("http://127.0.0.1:8000/api/child-information/" + id + "/")
             .then((response) => {
                 this.setState({
-                    SSN:response.data.SSN,
-                    address:response.data.address,
+                    childID:response.data.childID,
                     class_list:response.data.class_list,
-                    contract_number:response.data.contract_number,
-                    contract_salary:response.data.contract_salary,
-                    contract_type:response.data.contract_type,
-                    degree:response.data.degree,
-                    familyName:response.data.familyName,
-                    gender:response.data.gender,
+                    parent_list:response.data.parent_list,
+                    hobbies:response.data.hobbies,
                     name:response.data.name,
-                    phoneNumber:response.data.phoneNumber
+                    familyName:response.data.familyName,
+                    birthDate:response.data.birthDate.split("T")[0],
+                    age:response.data.age,
                 })
                 console.log(response.data)
             })
@@ -60,19 +54,15 @@ export default class TeachersInfo extends Component {
 
                 <div className="row" style={{ paddingTop: "100px" }}>
                     <div className='col-12 col-md-4 justify-content-center d-flex' style={{ marginRight: "10px" }}>
-                        <img className='w-100 p-4 h-100' src={teachertop}></img>
+                        <img className='w-100 p-4' src={childtop}></img>
                     </div>
-                    <div className='col-12 card col-md-6 p-5'>
-                        <h6>نام معلم: {this.state.name}</h6>
-                        <h6>نام خانوادگی معلم:{this.state.familyName}</h6>
-                        <h6>شماره موبایل معلم: {this.state.phoneNumber}</h6>
-                        <h6>جنسیت معلم: {this.state.gender==0?"خانم":"آقا"}</h6>
-                        <h6>درجه معلم: {this.state.degree}</h6>
-                        <h6>نوع معلم: {this.state.contract_type=="a"?"ساعتی":"قراردادی"}</h6>
-                        <h6>حقوق معلم: {this.state.contract_salary}</h6>
-                        <h6>شماره کارمندی معلم: {this.state.contract_number}</h6>
-                        <h6>آدرس معلم: {this.state.address}</h6>
-                        <h6>ssn معلم: {this.state.SSN}</h6>
+                    <div className='col-12 col-md-6 card p-5 justify-content-center'>
+                        <h6>نام کودک: {this.state.name}</h6>
+                        <h6>نام خانوادگی کودک:{this.state.familyName}</h6>
+                        <h6>سرگرمی کودک: {this.state.hobbies}</h6>
+                        <h6>تاریخ تولد کودک: {this.state.birthDate}</h6>
+                        <h6>سن کودک: {this.state.age}</h6>
+                        <h6>آیدی کودک: {this.state.childID}</h6>
                     </div>
                     <div className="row p-4">
                         <h3>لیست کلاس ها:</h3>

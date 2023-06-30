@@ -103,10 +103,10 @@ export default class ClassManagement extends Component {
             <div className="container-fluid">
 
                 <div className="row" style={{ paddingTop: "100px" }}>
-                    <div className='col-12 col-md-3 justify-content-center d-flex' style={{ marginRight: "10px" }}>
-                        <img className='w-100' src={classtop}></img>
+                    <div className='col-12 col-md-4 justify-content-center d-flex' style={{ marginRight: "10px" }}>
+                        <img className='w-100 p-4' src={classtop}></img>
                     </div>
-                    <div className='col-12 col-md-8 card p-5'>
+                    <div className='col-12 col-md-6 card p-5 justify-content-center d-flex'>
                         <h6>موضوع کلاس: {this.state.subject}</h6>
                         <h6>شماره کلاس:{this.state.classnumber}</h6>
                         <h6>قیمت کلاس: {this.state.price}</h6>
@@ -161,6 +161,8 @@ export default class ClassManagement extends Component {
                         </div>
                     </div>
                 </div>
+                <br/>
+                <br/>
             </div>
         )
     }

@@ -14,7 +14,7 @@ export default class Children extends Component {
                         <h6 class="pt-5">تاریخ تولد: {this.props.birthDate}</h6>
                         <h6>سن کودک: {this.props.age}</h6>
                         <h6>سرگرمی کودک: {this.props.hobbies}</h6>
-                        <Link to={"/childrens/1"}><a style={{marginTop:"20px"}} href="#" class="btn btn-light">مشاهده کودک</a></Link>
+                        <Link to={"/childrens/"+this.props.childID}><a style={{marginTop:"20px"}} href="#" class="btn btn-light">مشاهده کودک</a></Link>
                     </div>
                 </div>
             </div>

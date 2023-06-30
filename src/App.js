@@ -6,6 +6,7 @@ import AddChild from './components/screens/forms/AddChild';
 import AddClass from './components/screens/forms/AddClass';
 import Navbar from './components/Navbar';
 import TeachersInfo from './components/screens/teachers/TeachersInfo';
+import ChildrensInfo from './components/screens/childrens/ChildrensInfo';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
             <Route path="/add-class" element={<AddClass />} />
             <Route path="/classes/:id" element={<ClassManagement />} />
             <Route path="/teachers/:id" element={<TeachersInfo />} />
+            <Route path="/childrens/:id" element={<ChildrensInfo />} />
           </Routes>
         </Router>
     </div>
