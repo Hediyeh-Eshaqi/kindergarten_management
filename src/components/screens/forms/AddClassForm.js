@@ -46,6 +46,7 @@ export default class AddClassForm extends Component {
             "year": this.state.year,
             "subject": this.state.subject
         }
+        // console.log(tosend)
         this.postData(tosend)
     } 
     loadData = async () => {

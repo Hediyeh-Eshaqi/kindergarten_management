@@ -135,9 +135,10 @@ export default class ClassManagement extends Component {
                         <div className="row">
                         {
                                 this.state.children_list.map((row, index) => (
-                                    <Teacher1 key={index}
+                                    <Children1 key={index}
                                         name = {row.name}
                                         familyName = {row.familyName}
+                                        childID = {row.childID}
                                     />
                                 ))
                             }

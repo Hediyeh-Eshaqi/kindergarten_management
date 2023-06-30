@@ -63,6 +63,10 @@ export default class ChildrensInfo extends Component {
                         <h6>تاریخ تولد کودک: {this.state.birthDate}</h6>
                         <h6>سن کودک: {this.state.age}</h6>
                         <h6>آیدی کودک: {this.state.childID}</h6>
+                        <h6>سرپرستان کودک:</h6>
+                        {this.state.parent_list.map((row, index) => (
+                                    <h6 key={index}> -{row.name} {row.familyName}</h6>
+                        ))}
                     </div>
                     <div className="row p-4">
                         <h3>لیست کلاس ها:</h3>

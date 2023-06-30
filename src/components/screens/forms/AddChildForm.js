@@ -19,7 +19,7 @@ export default class AddChildForm extends Component {
 
     onsend(){
         var tosend = {
-            "'parents": this.state.selected_id,
+            "parents": this.state.selected_id,
             "hobbies": this.state.hobbies,
             "familyName": this.state.lastname,
             "birthDate": this.state.birthdate+"T12:32:41Z",
