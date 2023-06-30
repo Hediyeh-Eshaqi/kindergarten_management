@@ -14,7 +14,7 @@ export default class Teacher extends Component {
                         <h6 class="pt-5">درجه کارمند: {this.props.degree}</h6>
                         <h6>جنسیت کارمند: {this.props.gender}</h6>
                         <h6>نوع کارمند: {this.props.contract_type=="a"?"ساعتی":"قراردادی"}</h6>
-                        <Link to={"/childrens/1"}><a style={{marginTop:"20px"}} href="#" class="btn btn-light">مشاهده کارمند</a></Link>
+                        <Link to={"/teachers/"+this.props.SSN}><a style={{marginTop:"20px"}} href="#" class="btn btn-light">مشاهده کارمند</a></Link>
                     </div>
                 </div>
             </div>

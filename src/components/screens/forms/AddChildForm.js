@@ -10,18 +10,22 @@ export default class AddChildForm extends Component {
             name:"",
             lastname:"",
             hobbies:"",
-            birthdate:""
+            birthdate:"",
+            selected_id:[]
         };
+        this.onSelect = this.onSelect.bind(this);
+        this.onRemove = this.onRemove.bind(this);
     }
 
     onsend(){
         var tosend = {
-            "'parents": this.state.options,
+            "'parents": this.state.selected_id,
             "hobbies": this.state.hobbies,
             "familyName": this.state.lastname,
             "birthDate": this.state.birthdate+"T12:32:41Z",
             "name" : this.state.name,
         }
+        console.log(tosend)
         this.postData(tosend)
     }  
     postData = async (tosend) => {
@@ -36,11 +40,23 @@ export default class AddChildForm extends Component {
             })
     }
     onSelect(selectedList, selectedItem) {
-
+        var sel = []
+        for (let index = 0; index < selectedList.length; index++) {
+            sel = [...sel, selectedList[index].SSN]
+        }
+        this.setState({
+            selected_id: sel
+        })
     }
 
     onRemove(selectedList, removedItem) {
-
+        var sel = []
+        for (let index = 0; index < selectedList.length; index++) {
+            sel = [...sel, selectedList[index].SSN]
+        }
+        this.setState({
+            selected_id: sel
+        })
     }
 
     componentDidMount(){

@@ -122,6 +122,7 @@ export default class ClassManagement extends Component {
                                     <Teacher1 key={index}
                                         name = {row.name}
                                         familyName = {row.familyName}
+                                        SSN = {row.SSN}
                                     />
                                 ))
                             }
