@@ -14,7 +14,7 @@ export default class Class extends Component {
                         <h6 class="pt-5">شماره کلاس: {this.props.classNumber}</h6>
                         <h6>قیمت کلاس: {this.props.price}</h6>
                         <h6>سال کلاس: {this.props.year}</h6>
-                        <Link to={"/classes/1"}><a style={{marginTop:"20px"}} href="#" class="btn btn-light">مدیریت کلاس</a></Link>
+                        <Link to={"/classes/"+this.props.classNumber}><a style={{marginTop:"20px"}} href="#" class="btn btn-light">مدیریت کلاس</a></Link>
                     </div>
                 </div>
             </div>

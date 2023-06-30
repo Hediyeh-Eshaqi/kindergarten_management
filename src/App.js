@@ -9,17 +9,15 @@ import Navbar from './components/Navbar';
 function App() {
   return (
     <div>
-      <header>
         <Navbar/>
         <Router>
           <Routes>
             <Route path="/" element={<Mainpage />} />
             <Route path="/add-child" element={<AddChild />} />
             <Route path="/add-class" element={<AddClass />} />
-            <Route path="/classes/1" element={<ClassManagement />} />
+            <Route path="/classes/:id" element={<ClassManagement />} />
           </Routes>
         </Router>
-      </header>
     </div>
   );
 }
